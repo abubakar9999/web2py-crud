@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>show Data in Database</title>
+</head>
+<body>
+
+  <p>This is a basic paragraph in HTML. It is enclosed within the opening and closing p tags.</p>
+
+  <table width="90%" border="1" cellpadding="1" cellspacing="1" class="sample_border" style="background-color:#F5F5F5" >
+
+    {{for i in range(len(physicianRows)):
+       records_ov_dict=physicianRows[i]   
+       #record_id=str(records_ov_dict["id"])      
+       physician_id=str(records_ov_dict["physician_id"])      
+       physician_name=str(records_ov_dict["physician_name"])                                         
+       mobile_no=str(records_ov_dict["mobile_no"])                                         
+       password=str(records_ov_dict["password"])                                         
+     }}
+
+    <tr align="left" class="blackCat"  style="vertical-align:middle; font-size:12px;"> 
+       <td width="200px"  style="padding-left: 20px">{{=physician_id}}</td>
+       <td width="200px" style="padding-left: 20px">{{=physician_name}}</td>
+       <td width="200px" style="padding-left: 20px">{{=mobile_no}}</td>
+       <td width="200px" style="padding-left: 20px"><span class="password-mask">{{=password}}</span></td>
+
+        <!-- <form  name="form1" action="{{#=URL(c='physician',f='physician_delete',args=[physician_id])}}" method="post"  >
+               <td align="right">
+                   <button type="submit" name="btn_delete" id="btn_delete" value="" style="background-color: transparent;border: none;" onclick="if (!confirm('Do you really want to delete?')) { return false }">X</button> 
+           </td>
+       </form>  -->
+        <!-- <form  name="form2" action="{{=URL(c='physician',f='physician_edit',args=[physician_id, physician_name, mobile_no, password])}}" method="post"  >
+             <td align="right" width="20px"style="vertical-align:top;">
+                 <button type="submit" name="btn_edit" id="btn_edit" value="" style="background-color: transparent;border: none;">>>
+                 </button> 
+             </td>
+       </form>  -->
+   </tr>
+
+   {{pass}}
+</table>
+
+</body>
+</html>

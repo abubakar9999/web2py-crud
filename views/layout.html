@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+  <head>
+    <p>Hello this is abubakar</p>
+  </head>
+  <body>
+    <h1>Nishita</h1>
+   
+    <!-- Masthead ===================================== -->
+    {{block header}}
+    {{end}}
+    <!-- Main ========================================= -->
+    <!-- Begin page content -->
+    <div class="container-fluid main-container">
+      {{include}}
+      {{=response.toolbar() if response.show_toolbar else ''}}
+    </div>
+
+    
+ 
+
+
+  </body>
+</html>

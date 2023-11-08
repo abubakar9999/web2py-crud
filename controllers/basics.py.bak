@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# try something like
+
+
+
+def helloworl():
+    msg="this is my"
+    return locals()
+def request_argument():
+    value1 = request.vars[0]
+    value2 = request.vars[1]
+    total=value1+value2
+    return locals()
+def index(): return dict(message="hello from basics.py")
